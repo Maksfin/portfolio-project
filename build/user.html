@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Добро пожаловать</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-login">
+        <div class="header-login__btn"><a class="btn-link btn-link_opacity" href="user.html">Авторизоваться</a></div>
+      </div>
+      <main class="login">
+        <div class="main-center">
+          <div class="main-center__content">
+            <form class="form-contact" action="#">
+              <h2 class="block-subtitle block-subtitle_white">Авторизуйтесь</h2>
+              <div class="input-group input-group__block">
+                <div class="input-group__icon"><span class="input-group__login">
+                    <svg class="icon" width="18" height="18">
+                      <use xlink:href="assets/img/sprite.svg#login"></use>
+                    </svg></span>
+                  <label class="visually-hidden" for="login"></label>
+                  <input class="form-contact__name" type="text" name="login" placeholder="Логин" id="login">
+                </div>
+              </div>
+              <div class="input-group input-group__block">
+                <div class="input-group__icon"><span class="input-group__pass">
+                    <svg class="icon" width="18" height="18">
+                      <use xlink:href="assets/img/sprite.svg#password"> </use>
+                    </svg></span>
+                  <label class="visually-hidden" for="password"></label>
+                  <input class="form-contact__email" type="password" name="password" placeholder="Пароль" id="password">
+                </div>
+              </div>
+              <div class="input-group input-group__block">
+                <input class="form-contact__check" type="checkbox" name="children" id="children" checked>
+                <label class="form-contact__check-label" for="children">Я человек</label>
+              </div>
+              <div class="input-group input-group__block">
+                <div class="form-login">
+                  <div class="form-login__check">Вы точно не робот?</div>
+                </div>
+                <input class="form-contact__radio" type="radio" name="robot" value="1" id="yes" checked>
+                <label class="form-contact__radio-label" for="yes">Да</label>
+                <input class="form-contact__radio" type="radio" name="robot" value="0" id="no">
+                <label class="form-contact__radio-label" for="no">Не уверен</label>
+              </div>
+            </form>
+          </div>
+          <div class="main-center__footer">
+            <nav class="navigate">
+              <ul class="navigate__block">
+                <li class="navigate__item"><a class="navigate__link" href="index.html">Главная</a></li>
+                <li class="navigate__item"><a class="navigate__link" href="#">Войти</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__bottom footer__bottom_opacity"> 
+          <div class="footer__bottom-copyright">© Евгений Кочешков | Создано с любовью в LoftSchool | 2017</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="./assets/scripts/main.js" defer></script>
+</html>

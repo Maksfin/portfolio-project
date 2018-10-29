@@ -1,0 +1,98 @@
+.header{
+    &__top{
+        display: flex;
+        padding: 20px 0;
+        &_p{
+            @include iphone{
+                padding: 10px 0;
+            }  
+        }
+    }
+    &__block{
+        
+    }
+    &-login{
+        display: flex;
+        justify-content: flex-end;
+        flex: 0 0 auto;
+        &__btn{
+            margin: 20px 10px 0 0;
+            @include iphone{
+                margin: 20px auto;
+            }
+        }
+    }
+    &__user{
+        margin: 68px auto 0;
+        @include desktop{
+            margin-top: 70px;
+        }
+        @include iphone{
+            margin-top: 68px;
+        }
+    }
+}
+.web{
+    padding: 0;
+    &__items{
+        display: inline-block;
+        padding: 0 10px;
+        &_l{
+            padding-left: 10px; 
+            @include iphone{
+                padding: 0;
+            }
+            
+        }
+    }
+    &__link{
+        vertical-align: middle;
+        @include iphone{
+            padding: 0 13px;
+        }
+        &:hover, &:focus, &:active{
+            svg, path{
+                fill: $green-color;
+            }
+        }
+    }
+}
+.menu{
+    margin-left: auto;
+    &__link{
+        background: none;
+        border: 0;
+        &_b{
+            position: relative;
+            top: -5px;
+            right: 10px;
+            @include iphone{
+                top: -2px;
+                padding: 0;
+                .icon{
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+        &:hover, &:focus, &:active{
+            svg, path{
+                fill: $green-color;
+            }
+            
+        }
+        &_modal{
+            margin: 18px 28px 0 0;
+            @include laptop{
+                margin-top: 30px;
+            }
+            @include iphone{
+                margin: 10px 10px 0 0;
+                .icon{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }   
+}

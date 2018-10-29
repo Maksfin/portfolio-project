@@ -1,0 +1,740 @@
+html{
+    @include desktop{
+        font-size: 16px;
+    }
+    @include laptop{
+        font-size: 15px;
+    }
+    @include ipad{
+        font-size: 14px;
+    }
+    @include iphone{
+        font-size: 14px;
+    }
+}
+.text-content{
+    @include roboto(r);
+    color: $gray-h2;
+    line-height: 1.5;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    perspective: 1200;
+    transform-style: preserve-3d;
+    @include iphone{
+        padding: 0 10px 40px 10px;
+    }
+    &-center{
+        max-width: 380px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        &__content{
+            padding: 40px 20px 0px;
+            @include ipad{
+                min-width: 348px;
+            }
+            @include iphone{ 
+                min-width: 300px;
+            }
+            &_b{
+                padding-bottom: 1px;
+            }
+            &_f{
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    @include iphone{
+        padding: 0 10px 40px 10px;
+    }
+}
+.user{
+    width: 100%;
+    min-width: 340px;
+    @include ipad{
+        min-width: 100%;
+    }
+    @include iphone{
+        min-width: 100%;
+    }
+    &__block-images{
+        text-align: center;
+    }
+    &__image{
+        border-radius: 50%;
+        max-width: 140px;
+        max-height: 140px;
+    }
+    &__description{
+        line-height: 1.5;
+        margin: 8px 0 28px;
+        &_l{
+            line-height: 1.3;
+            text-align: center;
+            margin: 20px 0 -15px;
+            @include iphone{
+                line-height: 1.6;
+                margin: 22px 0 -15px;
+            }
+        }
+    }
+    &-description{
+       
+        &__image{
+            text-align: center;
+            padding: 0 20px;
+        }
+        &__avatar{
+            max-width: 470px;
+            width: 100%;
+            padding: 0 0 35px;
+        }
+        &__text{
+            padding: 0 20px; 
+            @include laptop{
+                line-height: 1.6;
+            }
+            @include ipad{
+                line-height: 1.6;
+            }
+            @include iphone{
+                line-height: 1.6;
+                padding: 0 10px;
+            }
+        }
+        &__title{
+            padding: 0 20px; 
+        }
+
+    }
+    &__name{
+        @include roboto(m);
+        font-size: 28px;
+        color:white;
+        @include iphone{
+            font-size: 21px;
+        }
+        &_size{
+            font-size: 35px;
+            @include iphone{
+                font-size: 22px
+            }
+        }
+        &_max{
+            text-transform: uppercase;
+            font-size: 63px;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            @include sansus(w);
+            position: relative;
+            line-height: 1.1;
+            @include ipad{
+                font-size: 49px;
+            }
+            @include iphone{
+                font-size: 35px;
+            }
+            &:before{
+                content: "";
+                width: 90px;
+                height: 3px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0px auto;
+                background: #fff;
+            }
+        }
+    }
+    &__info{
+        @include roboto(r);
+        color:white
+    }
+    
+}
+.navigate{
+    &__block{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        align-items: stretch;
+        flex-flow: row wrap;
+    }
+    &__item{
+        display: flex;
+        flex: 1;
+        border-right: 1px solid white;
+        &:last-child{
+            border: 0;
+        } 
+    }
+    &__link{
+        color: white;
+        text-decoration: none;
+        @include roboto(m);
+        display: block;
+        padding: 14px 0;
+        background: $green; 
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &_style{
+            border: 0;
+            cursor: pointer;
+        }
+        &:hover, &:active, &:focus{
+            background: $green-color;
+        }
+    }
+}
+.about{
+    &__block{
+        display: flex;
+        align-items: stretch;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        @include ipad{
+            flex-flow: column nowrap;
+        }
+        @include iphone{
+            flex-flow: column nowrap;
+        }
+    }
+    &__left, &__right{
+        width: 50%;
+    }
+    &__right{
+        background: $biege-l;
+        padding: 15px 40px 20px;
+        @include desktop{
+            padding-top: 0;
+        }
+        @include laptop{
+            padding: 15px 0 20px 35px;
+        }
+        @include ipad{
+            width: 100%;
+            display: block;
+            padding: 52px 0 20px 0;
+        }
+        @include iphone{
+            width: 100%;
+            display: block;
+            padding: 32px 0 0 0;
+        }
+        &-content{
+            @include ipad{
+                text-align: center;
+            }
+            @include iphone{
+                text-align: center;
+            }
+        }
+        &-text{
+            margin-bottom: 50px;
+            @include ipad{
+                margin-bottom: 45px;
+                max-width: 470px;
+                margin: 0 auto;
+            }
+            @include iphone{
+                margin-bottom: 45px;
+                max-width: 470px;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+        }
+        &-title{
+            @include desktop{
+                max-width: 320px;
+                margin: 0 auto;
+            }
+            @include laptop{
+                max-width: 470px;
+                margin: 0 auto;
+            }
+            @include ipad{
+                max-width: 470px;
+                margin: 0 auto;
+            }
+            @include iphone{
+                max-width: 470px;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__left{
+        background: $biege;
+        padding: 15px 80px 20px;
+        @include desktop{
+            display: flex;
+            padding: 8px 0 20px;
+        }
+        @include laptop{
+            display: block;
+            padding: 22px 78px 20px 70px;
+        }
+        @include ipad{
+            width: 100%;
+            display: block;
+            padding: 45px 120px 20px 120px;
+        }
+        @include iphone{
+            width: 100%;
+            display: block;
+            padding: 23px 0 20px 0;
+        }
+        &-title{
+            @include desktop{
+                width: 45%;
+            }
+            @include laptop{
+                width: 100%;
+            }
+        }
+        &-content{
+            @include desktop{
+                width: 55%;
+            }
+            @include laptop{
+                width: 100%;
+            }
+        }
+    }
+
+}
+.triangle-box{
+    position: relative;
+    margin-bottom: -5px;
+    .right{
+        width: 50%;
+        fill: $biege-l;
+        @include ipad{
+            fill: $biege; 
+        }
+        @include iphone{
+            fill: $biege; 
+        }
+    }
+    .left{
+        width: 50%;
+        fill: $biege;        
+    }
+}
+.triangle-box-lite{
+    position: relative;
+    margin-bottom: -5px;
+    .right, .left{
+        width: 50%;
+        fill: $biege-l;
+    }
+}
+.section{
+    &-title{
+        position: relative;
+        top: -45px;
+        margin: 0 auto;
+        @include iphone{
+            top: -20px;
+        }
+        &_m{
+            top: -20px;
+        }
+        &_pos{
+            @include ipad{
+                top: -65px;
+                width: 50%;
+            }            
+        }
+    }
+}
+.map{
+    &__contacts{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 auto;
+        min-height: 925px;
+        @include laptop{
+            min-height: 555px;
+        }
+        @include ipad{
+            min-height: 630px;
+        }
+        @include iphone{
+            align-items: flex-start;
+            min-height: 785px;
+        }
+    }
+}
+.contacts{
+    background: rgba(255, 255, 255, .8);
+    min-width: 380px;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 25px 40px;
+    z-index: 1;
+    @include ipad{
+        min-width: 350px;
+        padding: 30px 20px;
+    }
+    @include iphone{
+        min-width: 100%;
+        padding: 22px 25px;
+        border-radius: 0;
+    }
+    &__list{
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+    &__content{
+        padding: 40px 20px;
+    }
+    &__item{
+        padding: 12px 0;
+        @include iphone{
+          padding: 14px 0;  
+        }   
+    }
+    &__block{
+        padding-left: 35px;
+        @include roboto(m);
+        color: $gray-h2;
+    }
+    &__icon{
+        position: relative;
+        top: -3px;
+    }
+}
+.blog{
+    position: relative;
+    &-block{
+        display: flex;
+        align-items: stretch;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        background: $biege-l;
+        &__right{
+            width: 66.6%;
+            padding: 60px 90px 20px 10px;
+            @include ipad{
+                width: 100%;
+                padding: 60px 25px 20px 25px;
+            }
+            @include iphone{
+                padding: 60px 10px 20px 10px;
+            }
+            &-text{
+                margin-bottom: 50px;
+            }
+        }
+        &__left{
+            width: 33.3%;
+            padding: 55px 90px 20px 10px;
+            @include laptop{
+                padding-right: 3%;
+            }
+            &_toggle{
+                @include ipad{
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: -100%;
+                    padding: 18px 18px 18px 45px;
+                    width: 100%;
+                    background: $green;
+                    &.active{
+                        left: -70px;
+                        z-index: 2;
+                    }
+                    .aside-menu{
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        height: 100%;
+                    }
+                }
+                @include iphone{
+                    &.active{
+                        left: -45px;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+   }
+   &-description{
+        padding: 70px 0;
+        border-bottom: 5px solid #ecebe4;
+        &:first-child{
+            padding-top: 0;
+        }
+        &:last-child{
+            margin-bottom: 25%;
+        }
+       &__title{
+            margin: 0;
+            padding-bottom: 20px;
+            @include ipad{
+                font-size: 30px;
+            }
+            @include iphone{
+                font-size: 21px;
+            }
+       }
+       &__date{
+            color: $green-color;
+            @include roboto(r);
+            padding-bottom: 20px;
+       }
+       &__text{
+            
+       }
+   }
+}
+.work{
+    position: relative;
+    &__center{
+        background: $biege-l;
+        display: flow-root;
+        @include iphone{
+            display: block;
+            padding: 13px 0 1px 0;
+        }
+    }
+    &__title{
+        margin-top: 54px;
+        @include laptop{
+            margin-top: 35px;
+        }
+        @include ipad{
+            margin-top: 40px;
+        }
+        @include iphone{
+            margin-top: 10px;
+        }
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 750px;
+        height: 100vh;
+        @include ipad{
+            flex-wrap: nowrap;
+            height: 100%;
+            min-height: 100%;
+        }
+    }
+
+    &__right{
+        background: #e1e4d7;
+        overflow: hidden;
+        height: 70%;
+        &-text{
+            margin-bottom: 50px;
+        }
+        @include ipad{
+            order: 1;
+        }
+    }
+    &__left{
+        background: $biege;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        @include ipad{
+            order: 2;
+            padding: 50px 0;
+        }
+        @include iphone{
+            padding: 30px 0;            
+        }
+    }
+    &__btn{
+        height: 30%;
+        @include ipad{
+            order: 3;
+        }
+    }
+    &__left, &__right, &__btn{
+        width: 50%;
+        @include ipad{
+            width: 100%;
+        }
+    }
+}
+.form-contact_w:before{
+    background: url('../img/bg_works.jpg') center / cover ;
+    background-size: initial;
+    background-position: -365px -365px;
+}
+.speak{
+    padding-top: 55px;
+    background: url('../img/bg_works.jpg') center 0/cover no-repeat;
+    @include desktop{
+        padding-top: 75px;
+    }
+    &-center{
+        &__form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 680px;
+            @include desktop{
+                min-height: 600px;
+            }
+            @include ipad{
+                min-height: 570px;
+            }
+            @include iphone{
+                min-height: 490px;
+                padding: 0 10px;
+            }
+        }
+        &__content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+.comment{
+    &-list{
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include ipad{
+            flex-flow: column nowrap;
+        }
+        @include iphone{
+            flex-flow: column nowrap;
+        }
+        &__item{
+            max-width: 400px;
+            width: 100%;
+            flex-basis: auto;
+            flex-grow: 1;
+            padding: 0 10px
+        }
+        &__author{
+            @include roboto(bi);
+            color: $green-color;
+            text-align: center;
+            display: block;
+            @include ipad{
+                line-height: 1.6;
+            }
+            @include iphone{
+                line-height: 1.6;
+            }
+        }
+        &__status{
+            text-align: center;
+            color: $gray-h1;
+        }
+        &__content{
+            @include roboto(i);
+            color: $gray-h2;
+            &_p{
+                position: relative;
+                z-index: 0;
+                top: -25px;
+            }
+            &_s{
+                position: relative;
+                z-index: 1;
+                @include ipad{
+                    margin-bottom: 28px;
+                    line-height: 1.7;
+                    p{
+                        margin-bottom: 10px;
+                    }
+                }
+                @include iphone{
+                    margin-bottom: 28px;
+                    line-height: 1.7;
+                    p{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        &__images{
+            margin: 5px auto 15px;
+            width: 77px;
+            height: 77px;
+            border-radius: 50%;
+            overflow: hidden;
+            @include ipad{
+                width: 50px;
+                height: 50px;
+            }
+            @include iphone{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        &__img{
+            width: 100%;
+            height: auto;
+        }
+        &__blockquote{
+            margin-bottom: 15px;
+        }
+    }
+}
+.site{
+    &-school{
+        text-align: center;
+        max-width: 340px;
+        &__description{
+            @include roboto(m);
+            color: $green-color;
+            margin-bottom: 60px;
+            @include ipad{
+                margin-bottom: 35px;
+            }
+            @include iphone{
+                margin-bottom: 15px;                
+            }        
+        }
+        &__text{
+            padding-left: 30px;
+        }
+    }
+}
+#bg{
+    position: fixed;
+    overflow: hidden;
+    z-index: -1;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 0, 0, .5), transparent 50%, rgba(0, 0, 0, .5));
+    }
+}

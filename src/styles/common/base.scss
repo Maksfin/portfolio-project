@@ -1,0 +1,76 @@
+* , :after , :before{
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+}
+body{
+    background: url('../img/water.jpg') 0/cover fixed; 
+}
+h1{
+    @include sansus(w);
+    font-size: 63px;
+}
+h2{
+    @include sansus(w);
+    font-size: 35px;
+}
+input, textarea{
+    outline: none;
+    border: 1px solid #fff;
+}
+textarea{
+    resize: vertical;
+}
+button{
+    outline: none;
+}
+input, textarea{
+    &:focus{
+        border: 1px solid #7ba5ff;
+    }
+}
+ul, blockquote{
+    margin: 0;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+.container {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+    z-index: 1;
+}
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+// color
+$green-color:  #4e8839;
+$green: #6c9c5a;
+$green-circle: #77a266;
+$green-alf:rgba(108, 156, 90, 0.61);
+$gray-color: #373e42;
+$gray-color-alf: rgba(55, 62, 66, 0.77);
+$gray-border: #69716e;
+$gray-h2: #566358;
+$gray-h1: #373e42;
+$biege: #ebefe2;
+$biege-l: #f4f5f0;
+$red: #e34844;

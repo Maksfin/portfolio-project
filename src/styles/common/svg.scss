@@ -1,0 +1,56 @@
+#hamburger{
+    fill: red;
+}
+.icon {
+    line-height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    fill: #FFFFFF;
+    cursor: pointer;
+    .lhum{
+        stroke: red;
+    }
+    &:hover{
+        fill: $green-color;
+
+    }
+    &-svg{
+        width: 32px;
+        height: 22px;
+        fill: white;
+        cursor: pointer;
+        @include iphone{
+            width: 23px;
+            height: 23px;
+        }
+        &:hover{
+            fill: $green-color;
+
+        }
+    }
+    &-lite, &-green, &-green-lite{
+        line-height: 2rem;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+    }
+    &-lite{
+        fill: rgba(74, 152, 200, 0.25);
+        z-index: -1;
+    }
+    &-green{
+        fill: #e2ebd0;
+        z-index: 0;
+        @include iphone{
+            height: 80px;
+        }
+    }
+    &-white{
+        fill: currentColor;
+        position: absolute;
+    }
+    &-green-lite{
+        fill: $green-color;
+        z-index: 0;
+    }
+}
